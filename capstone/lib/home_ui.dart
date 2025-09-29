@@ -8,7 +8,7 @@ import 'package:flutter_naver_map/flutter_naver_map.dart';
 import 'analytics_ui.dart';
 import 'app_language.dart';
 import 'localizedtext.dart';
-import 'translation_service.dart' show translateText;
+import 'translation_service.dart';
 import 'chat_bot_screen.dart';
 
 class MainScreen extends StatefulWidget {
@@ -205,7 +205,7 @@ class _MainScreenState extends State<MainScreen> {
                                           fit: BoxFit.contain,
                                         ),
                                       ),
-                                label: Text(f['name'] as String),
+                                label: LocalizedText(original: f['name'] as String),
                                 selected: _filterSelected[i],
                                 onSelected: (_) => _onFilterSelected(i),
                                 selectedColor: _filterSelected[i]
